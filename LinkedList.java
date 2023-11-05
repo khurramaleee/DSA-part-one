@@ -1,3 +1,5 @@
+
+import java.util.NoSuchElementException;
 public class LinkedList {
 
     private class Node {
@@ -13,19 +15,27 @@ public class LinkedList {
     private Node last; //last
 
 
-    public void addlast(int data){
-        var node = new Node(data);
-        if(isEmpty()){
-            first = node;
-            last = node; 
-            // or we can this 
-            // first = last = node;
-        }
-        else{
-            last.next = node;
-            last = node;
-        }
+/**
+ * Adds a new node with the given data to the end of the linked list.
+ *
+ * @param data the data to be added
+ */
+public void addLast(int data) {
+    // Create a new node
+    Node node = new Node(data);
+    
+    // Check if the linked list is empty
+    if (isEmpty()) {
+        // If it is empty, set both 'first' and 'last' to the new node
+        first = node;
+        last = node;
+    } else {
+        // If it is not empty, set the 'next' of the current 'last' node to the new node
+        last.next = node;
+        // Update the 'last' to be the new node
+        last = node;
     }
+}
     public void addFirst(int data){
         var node = new Node(data);
         if(isEmpty()){
@@ -57,8 +67,81 @@ public int indexof(int item){
 
     return -1; // item not found, return -1
 }
-    private boolean isEmpty(){
-        return first == null;
+/**
+ * Checks if the linked list is empty.
+ * @return true if the linked list is empty, false otherwise.
+ */
+private boolean isEmpty() {
+    return first == null;
+}
 
+
+ 
+public boolean  contains(int item){
+    return indexof(item) != -1; // return true if item is found, false otherwise
+}
+
+/**
+ * Removes the first node in the linked list.
+ */
+public void removeFirst() {
+    // Check if the list is empty
+    if (isEmpty()) {
+        throw new NoSuchElementException("List is empty");
+    }
+    
+    // Check if there is only one node in the list
+    if (first == last) {
+        // Remove the only node in the list
+        first = last = null;
+        return;
+    }
+    
+    // Get the second node in the list
+    var second = first.next;
+
+    // Remove the link from the first node to the second node
+    first.next = null;
+
+    // Set the first node to the second node
+    first = second;
+}
+
+/**
+ * Remove the last element from the list.
+ *
+ * @param  paramName  None
+ * @return            None
+ */
+public void removelast(){
+    if (isEmpty()) {
+        throw new NoSuchElementException("List is empty");
+    }
+    
+    // Check if there is only one node in the list
+    if (first == last) {
+        // Remove the only node in the list
+        first = last = null;
+        return;
+    }
+    var previous = getPrevious(last);
+    last = previous;
+    last.next = null;
+}
+/**
+ * Returns the previous node of the given node in the linked list.
+ *
+ * @param  node  the node whose previous node needs to be found
+ * @return       the previous node of the given node, or null if the given node is the first node
+ */
+private Node getPrevious(Node node){
+    
+    var current = first;
+    while (current != null){ 
+        if (current.next == node) return current;
+        current = current.next;  
+        }
+        return null;
     }
 }
+

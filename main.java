@@ -9,10 +9,12 @@ public class main {
         // System.out.println(numbers.indexof(044 ));
         //  numbers.print();
          var  list = new LinkedList();
-         list.addlast(10);
-          list.addlast(20);
-           list.addlast(30);
-        System.out.println(list.indexof(10));
+         list.addLast(10);
+          list.addLast(20);
+           list.addLast(30);
+        //    list.removelast();
+        System.out.println(list.indexof(30));
+        //  System.out.println(list.contains(1440));
 
 
     }
