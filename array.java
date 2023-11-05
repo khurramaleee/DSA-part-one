@@ -21,6 +21,7 @@ public class array {
                 }
                 count--;
             }
+    //test
     public void insert(int item) {
 
         if (count == items.length) {
