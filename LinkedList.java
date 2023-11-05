@@ -105,15 +105,18 @@ public void removeFirst() {
         first = last = null;
         return;
     }
-    
-    // Get the second node in the list
-    var second = first.next;
+    else{
+var second = first.next;
 
     // Remove the link from the first node to the second node
     first.next = null;
 
     // Set the first node to the second node
     first = second;
+    }
+    
+    // Get the second node in the list
+    
      size--;
 }
     /**
@@ -141,9 +144,12 @@ public void removelast(){
         first = last = null;
         return;
     }
-    var previous = getPrevious(last);
+    else{
+ var previous = getPrevious(last);
     last = previous;
     last.next = null;
+    }
+   
      size--;
 }
 /**
@@ -161,7 +167,42 @@ private Node getPrevious(Node node){
         }
         return null;
     }
+public int[] toArray(){
+    int[] array = new int[size];
+    var current = first;
+    var index = 0;
+    while (current!=null) {
+        array[index++] = current.value;
+        current = current.next;
+    }
+    return array;
+}
 
-
+/**
+ * Reverses the linked list.
+ */
+public void reverse() {
+    // Set the initial pointers
+    var previous = first;
+    var current = first.next;
+    last = first;
+    last.next = null;
+    
+    // Iterate through the list
+    while (current != null) {
+        var next = current.next;
+        
+        // Reverse the links
+        current.next = previous;
+        
+        // Move the pointers
+        previous = current;
+        current = next;
+    }
+    
+    // Update the first pointer
+    first = previous;
+}
+ 
 }
 

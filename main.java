@@ -1,3 +1,4 @@
+import java.util.Arrays;
 public class main {
     public static void main(String[] args) {
         //  array numbers = new array(3);
@@ -15,10 +16,11 @@ public class main {
         //    list.removelast();
         // System.out.println(list.indexof(30));
           System.out.println(list.size());
-           list.removelast();
+        //    list.removelast();
            System.out.println(list.size());
         //  System.out.println(list.contains(1440));
-
+            var array = list.toArray();
+            System.out.println(Arrays.toString(array));
 
     }
 }
