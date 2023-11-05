@@ -182,12 +182,10 @@ public int[] toArray(){
  * Reverses the linked list.
  */
 public void reverse() {
+    if(isEmpty()) return;
     // Set the initial pointers
     var previous = first;
     var current = first.next;
-    last = first;
-    last.next = null;
-    
     // Iterate through the list
     while (current != null) {
         var next = current.next;
@@ -199,10 +197,44 @@ public void reverse() {
         previous = current;
         current = next;
     }
-    
+    last = first;
+    last.next = null;
     // Update the first pointer
     first = previous;
 }
- 
+/**
+ * Returns the kth element from the end of the linked list.
+ *
+ * @param k The position of the element from the end of the list.
+ * @return The value of the kth element from the end of the list.
+ * @throws IllegalArgumentException if k is greater than the length of the list.
+ */
+public int getKthFromTheEnd(int k) {
+    if (k > size) {
+        throw new IllegalArgumentException("k is greater than the length of the list");
+    }
+    
+    Node a = first; // Set pointer 'a' to the first node of the linked list.
+    Node b = first; // Set pointer 'b' to the first node of the linked list.
+    
+    // Move 'b' pointer to the kth node from the first node.
+    for (int i = 0; i < k - 1; i++) {
+        b = b.next;
+        System.out.println(b.value+"b value from for loop");
+        if (b == null) {
+            throw new IllegalArgumentException("k is greater than the length of the list");
+        }
+    }
+    
+    // Move both 'a' and 'b' pointers until 'b' reaches the last node.
+    while (b != last) {
+        a = a.next;
+        b = b.next;
+        System.out.println(a.value+"a value from while loop");
+    }
+    
+    // Return the value of the kth element from the end of the list.
+    return a.value;
+}
 }
 

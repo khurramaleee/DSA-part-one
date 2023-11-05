@@ -10,17 +10,24 @@ public class main {
         // System.out.println(numbers.indexof(044 ));
         //  numbers.print();
          var  list = new LinkedList();
-         list.addFirst(10);
-          list.addLast(20);
-           list.addLast(30);
+         list.addFirst(1);
+          list.addLast(2);
+           list.addLast(3);
+           list.addLast(4);
+           list.addLast(5);
+           list.addLast(6);
+           list.addLast(7);
         //    list.removelast();
         // System.out.println(list.indexof(30));
-          System.out.println(list.size());
-        //    list.removelast();
-           System.out.println(list.size());
+        //   System.out.println(list.size());
+        // //    list.removelast();
+        //    System.out.println(list.size());
         //  System.out.println(list.contains(1440));
-            var array = list.toArray();
-            System.out.println(Arrays.toString(array));
+        // list.reverse();
+        //     var array = list.toArray();
+            // System.out.println(Arrays.toString(array));
+        
+         System.out.println(list.getKthFromTheEnd(3));
 
     }
 }
