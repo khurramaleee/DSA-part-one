@@ -5,6 +5,7 @@ public class LinkedList {
     private class Node {
         private int value;
         private Node next;
+      
         public Node (int value){
             this.value = value;
         }
@@ -13,6 +14,7 @@ public class LinkedList {
 
     private Node first; //first
     private Node last; //last
+      private int size;
 
 
 /**
@@ -35,6 +37,12 @@ public void addLast(int data) {
         // Update the 'last' to be the new node
         last = node;
     }
+    size++;
+    /**
+     * Adds a new node with the given data at the beginning of the linked list.
+     *
+     * @param  data  the data to be added to the new node
+     */
 }
     public void addFirst(int data){
         var node = new Node(data);
@@ -46,6 +54,7 @@ public void addLast(int data) {
              node.next = first;  // setting the next of node to first
              first = node; // setting the first to node
         }
+         size++;
     }
 /**
  * Returns the index of the first occurrence of the specified item in the list.
@@ -105,8 +114,16 @@ public void removeFirst() {
 
     // Set the first node to the second node
     first = second;
+     size--;
 }
-
+    /**
+     * Retrieves the size of the object.
+     *
+     * @return the size of the object
+     */
+    public int size(){
+        return size; 
+    }
 /**
  * Remove the last element from the list.
  *
@@ -127,6 +144,7 @@ public void removelast(){
     var previous = getPrevious(last);
     last = previous;
     last.next = null;
+     size--;
 }
 /**
  * Returns the previous node of the given node in the linked list.
@@ -143,5 +161,7 @@ private Node getPrevious(Node node){
         }
         return null;
     }
+
+
 }
 

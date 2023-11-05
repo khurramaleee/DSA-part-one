@@ -9,11 +9,14 @@ public class main {
         // System.out.println(numbers.indexof(044 ));
         //  numbers.print();
          var  list = new LinkedList();
-         list.addLast(10);
+         list.addFirst(10);
           list.addLast(20);
            list.addLast(30);
         //    list.removelast();
-        System.out.println(list.indexof(30));
+        // System.out.println(list.indexof(30));
+          System.out.println(list.size());
+           list.removelast();
+           System.out.println(list.size());
         //  System.out.println(list.contains(1440));
 
 
