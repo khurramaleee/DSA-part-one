@@ -33,7 +33,7 @@ public class main {
          stringreverserusingstack res = new stringreverserusingstack();
          var result  = res.reverse(str);
          System.out.println(result);
-         // System.out.println(result);
+         
 
     }
 }
