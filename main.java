@@ -29,9 +29,12 @@ public class main {
         
         //  System.out.println(list.getKthFromTheEnd(3));
 
-         String str  = "khurram";
-         stringreverserusingstack res = new stringreverserusingstack();
-         var result  = res.reverse(str);
+        //  String str  = "khurram";
+        //  stringreverserusingstack res = new stringreverserusingstack();
+        //  var result  = res.reverse(str);
+        String str  = "}{(1+2)}";
+         expression res = new expression();
+         var result  = res.isBalanced(str);
          System.out.println(result);
          
 
