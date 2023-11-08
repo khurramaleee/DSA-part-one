@@ -1,4 +1,4 @@
-import java.util.Arrays;
+import java.util.*;
 public class main {
     public static void main(String[] args) {
         //  array numbers = new array(3);
@@ -32,11 +32,18 @@ public class main {
         //  String str  = "khurram";
         //  stringreverserusingstack res = new stringreverserusingstack();
         //  var result  = res.reverse(str);
-        String str  = "}{(1+2)}";
-         expression res = new expression();
-         var result  = res.isBalanced(str);
-         System.out.println(result);
+        // String str  = "}{(1+2)}";
+        //  expression res = new expression();
+        //  var result  = res.isBalanced(str);
+        //  System.out.println(result);
          
-
+        reversingqueue rq = new reversingqueue();
+        Queue<Integer> queue = new ArrayDeque<>();
+        queue.add(1);
+          queue.add(2);
+            queue.add(3);
+              queue.add(4);
+              System.out.println(queue.toString());
+              rq.reverse(queue);
     }
 }
