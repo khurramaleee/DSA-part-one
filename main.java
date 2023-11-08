@@ -37,13 +37,24 @@ public class main {
         //  var result  = res.isBalanced(str);
         //  System.out.println(result);
          
-        reversingqueue rq = new reversingqueue();
-        Queue<Integer> queue = new ArrayDeque<>();
-        queue.add(1);
-          queue.add(2);
-            queue.add(3);
-              queue.add(4);
-              System.out.println(queue.toString());
-              rq.reverse(queue);
+        // reversingqueue rq = new reversingqueue();
+        // Queue<Integer> queue = new ArrayDeque<>();
+        // queue.add(1);
+        //   queue.add(2);
+        //     queue.add(3);
+        //       queue.add(4);
+        //       System.out.println(queue.toString());
+        //       rq.reverse(queue);
+        arrayQueue queue = new arrayQueue(5);
+        queue.enqueue(1);
+          queue.enqueue(2);
+            queue.enqueue(3);
+            queue.dequeue(); 
+             queue.enqueue(4);
+              queue.enqueue(5);
+               queue.enqueue(6);
+                // queue.enqueue(7);
+            System.out.println(queue.toString());
+
     }
 }
