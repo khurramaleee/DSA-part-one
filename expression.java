@@ -40,7 +40,7 @@ public boolean isBalanced(String input) {
             }
         }
     }
-
+//
     // If the stack is empty after iterating over all characters, it means all brackets are matched and balanced
     return stack.empty();
 }
