@@ -17,6 +17,17 @@ public char findfirstnonrepeatingchar(  String str){
     // System.out.println( map);
     return Character.MIN_VALUE;
 }
+public char findfirstrepeatingchar(String str){
+Set<Character> set = new HashSet<>();
+for(var ch: str.toCharArray()){
+    if(set.contains(ch))
+        return ch;
+    set.add(ch);
 
+
+}
+return Character.MIN_VALUE;
+
+}
 
 }
