@@ -56,13 +56,24 @@ public class main {
         //         // queue.enqueue(7);
         //     System.out.println(queue.toString());
 
-        queuewithtwostack queue = new queuewithtwostack();
-        queue.enqueue(1);
-          queue.enqueue(2);
-            queue.enqueue(3);
-            queue.dequeue();
-              queue.dequeue();
-            System.out.println(queue.toString());
+        // queuewithtwostack queue = new queuewithtwostack();
+        // queue.enqueue(1);
+        //   queue.enqueue(2);
+        //     queue.enqueue(3);
+        //     queue.dequeue();
+        //       queue.dequeue();
+        //     System.out.println(queue.toString());
+        // pirorityqueue pq = new pirorityqueue();
+        // pq.add(2);
+        // pq.add(3);
+        // // pq.add(80);
+        // pq.add(8);
+        // pq.add(1);
+        // // pq.add(4);
+        // System.out.println(pq.toString());
+        charfinder cf = new charfinder();
+        var r = cf.findfirstnonrepeatingchar(" i a green apple");
+System.out.println(r);
 
     }
 }
