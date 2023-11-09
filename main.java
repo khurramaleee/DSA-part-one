@@ -45,15 +45,23 @@ public class main {
         //       queue.add(4);
         //       System.out.println(queue.toString());
         //       rq.reverse(queue);
-        arrayQueue queue = new arrayQueue(5);
+        // arrayQueue queue = new arrayQueue(5);
+        // queue.enqueue(1);
+        //   queue.enqueue(2);
+        //     queue.enqueue(3);
+        //     queue.dequeue(); 
+        //      queue.enqueue(4);
+        //       queue.enqueue(5);
+        //        queue.enqueue(6);
+        //         // queue.enqueue(7);
+        //     System.out.println(queue.toString());
+
+        queuewithtwostack queue = new queuewithtwostack();
         queue.enqueue(1);
           queue.enqueue(2);
             queue.enqueue(3);
-            queue.dequeue(); 
-             queue.enqueue(4);
-              queue.enqueue(5);
-               queue.enqueue(6);
-                // queue.enqueue(7);
+            queue.dequeue();
+              queue.dequeue();
             System.out.println(queue.toString());
 
     }
