@@ -88,7 +88,7 @@ public void remove(int key) {
     if (bucket == null) {
         throw new IllegalArgumentException();
     }
-    
+    //
     // Iterate over each entry in the bucket
     for (var entry : bucket) {
         // If the entry's key matches the specified key, remove the entry from the bucket
